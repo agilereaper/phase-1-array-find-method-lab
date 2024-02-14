@@ -3,8 +3,10 @@ const record = [
     { year: "2014", result: "N/A"},
     { year: "2013", result: "L"},
 ]
+const win = record.find(superbowlWin).year
 
 function superbowlWin(record){
-    const result = record.find(({result}) => result === "W")
-    return result
+    return record.result === "W";
 }
+
+console.log(win)
